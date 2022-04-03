@@ -10,3 +10,11 @@ window.addEventListener('load', function() {
         }
     });
 });
+
+const upload_button = document.querySelector("#upload_image")
+upload_button.addEventListener("click", () => {
+    const compress_button = document.querySelector("#compress_button")
+    compress_button.style.display = 'block'
+    upload_button.style.display = "none"
+
+})

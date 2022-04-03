@@ -10,6 +10,8 @@
 
 body {
     background: var(---primary_background);
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -27,7 +29,7 @@ body {
     justify-content: center;
     height: 90px;
     background: var(---main_color);
-    font-size: 25px;
+    font-size: 40px;
 }
 
 #pixella {
@@ -37,16 +39,17 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .image_container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #default_image {
-    height: 150px;
+    height: 200px;
     width: fit-content;
 }
 
@@ -61,6 +64,7 @@ body {
 
 ul * {
     margin: 10px 0;
+    font-size: 25px;
 }
 
 .button {
@@ -72,7 +76,14 @@ ul * {
 
 .button button {
     background-color: var(---main_color);
-    height: 35px;
+    height: 55px;
     border-radius: 15px;
     border: none;
+    width: 500px;
+}
+
+#compress_button {
+    width: 500px;
+    display: none;
+    font-size: 25px;
 }

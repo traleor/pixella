@@ -1,55 +1,52 @@
 /* Font Family Import */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800&display=swap");
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-
-  /* disable selecting of site content */
-  /* user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* disable selecting of site content */
+    /* user-select: none;
   -webkit-user-select: none; */
-
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 :root {
-  --main-color: #6ccff6;
-  --white-color: #fffffc;
-  --background-color: #001011;
-
-  /*------- Font and typography -------*/
-  --biggest-font-size: 1.25rem;
-  --h1-font-size: 3rem;
-  --h2-font-size: 2.6rem;
-  --h3-font-size: 2.2rem;
-  --h4-font-size: 1.8rem;
-  --normal-font-size: 1.2rem;
-  --small-font-size: 0.713rem;
-  --tiny-font-size: 0.625rem;
+    --main-color: #6ccff6;
+    --white-color: #fffffc;
+    --background-color: #001011;
+    /*------- Font and typography -------*/
+    --biggest-font-size: 1.25rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.6rem;
+    --h3-font-size: 2.2rem;
+    --h4-font-size: 1.8rem;
+    --normal-font-size: 1.2rem;
+    --small-font-size: 0.713rem;
+    --tiny-font-size: 0.625rem;
 }
 
 @media screen and (min-width: 1900px) {
-  :root {
-    --biggest-font-size: 1.5rem;
-    --h1-font-size: 3.2rem;
-    --h2-font-size: 2.8rem;
-    --h3-font-size: 2.4rem;
-    --h4-font-size: 2rem;
-    --normal-font-size: 1.8rem;
-    --small-font-size: 0.875rem;
-    --tiny-font-size: 0.688rem;
-  }
+     :root {
+        --biggest-font-size: 1.5rem;
+        --h1-font-size: 3.2rem;
+        --h2-font-size: 2.8rem;
+        --h3-font-size: 2.4rem;
+        --h4-font-size: 2rem;
+        --normal-font-size: 1.8rem;
+        --small-font-size: 0.875rem;
+        --tiny-font-size: 0.688rem;
+    }
 }
 
 body {
-  background: var(--background-color);
-  min-height: 100vh;
+    background: var(--background-color);
+    min-height: 100vh;
 }
 
 h1,
@@ -61,129 +58,131 @@ h6,
 div,
 p,
 span {
-  color: var(--white-color);
+    color: var(--white-color);
 }
 
 h1 {
-  font-weight: 800;
-  margin: 4vh auto;
-  font-size: var(--h1-font-size);
+    font-weight: 800;
+    margin: 4vh auto;
+    font-size: var(--h1-font-size);
 }
+
 h2 {
-  font-weight: 600;
-  margin: 3vh auto;
-  font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin: 3vh auto;
+    font-size: var(--h2-font-size);
 }
+
 h3 {
-  font-weight: 500;
-  margin: 2vh auto;
-  font-size: var(--h3-font-size);
+    font-weight: 500;
+    margin: 2vh auto;
+    font-size: var(--h3-font-size);
 }
+
 h4 {
-  font-weight: 400;
-  margin: 1vh auto;
-  font-size: var(--h4-font-size);
+    font-weight: 400;
+    margin: 1vh auto;
+    font-size: var(--h4-font-size);
 }
+
 p {
-  font-weight: 400;
-  margin: 1vh auto;
-  font-size: var(--normal-font-size);
+    font-weight: 400;
+    margin: 1vh auto;
+    font-size: var(--normal-font-size);
 }
 
 a {
-  color: var(--main-color);
-  text-decoration: none;
-  font-weight: 600;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 img,
 iframe,
 video {
-  width: 100%;
+    width: 100%;
 }
 
 .default-padding {
-  padding: 2rem 8vw;
+    padding: 2rem 8vw;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .container {
-  margin: 0 150px;
-  /*     display: grid;
-    grid-template-columns: repeat(1, 2fr); */
-  background-color: var(---secondary_background);
-  height: 100vh;
+    margin: 0 150px;
+    background-color: var(---secondary_background);
+    height: 100vh;
 }
 
 .heroText {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  height: 90px;
-  background: var(---main_color);
-  font-size: 40px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    background: var(---main_color);
+    font-size: 40px;
 }
 
 #pixella {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  padding: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding: 100px 0;
 }
 
 .image_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #default_image {
-  height: 200px;
-  width: fit-content;
+    height: 200px;
+    width: fit-content;
 }
 
 #wrapper_1 {
-  display: none;
+    display: none;
 }
 
 .info_container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 ul * {
-  margin: 10px 0;
-  font-size: 25px;
+    margin: 10px 0;
+    font-size: 25px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .button button {
-  background-color: var(---main_color);
-  height: 55px;
-  border-radius: 15px;
-  border: none;
-  width: 500px;
+    background-color: var(---main_color);
+    height: 55px;
+    border-radius: 15px;
+    border: none;
+    width: 500px;
 }
 
 #compress_button {
-  width: 500px;
-  display: none;
-  font-size: 25px;
+    width: 500px;
+    display: none;
+    font-size: 25px;
 }

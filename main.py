@@ -69,10 +69,11 @@ def main():
     print("\n")
     if compression_method == 1:
         # 1. Compress the image with KCompression
-        compressed_image = KMeanCompression(image, None)
+        k = int(input("Enter k factor e.g 8: "))
+        compressed_image = KMeanCompression(image, k)
     elif compression_method == 2:
         # 2. Compress the image with OtherCompression
-        resize_factor = int(input("Enter resize factor: "))
+        resize_factor = int(input("Enter resize factor e.g 4: "))
         compressed_image = ResizeCompression(image, resize_factor)
     else:
         print("Invalid input")

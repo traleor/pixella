@@ -1,59 +1,73 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixella - Image Processing Tool</title>
-    <link rel="stylesheet" href="{% static 'css/pixella.css' %}" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixella - Image Processing Tool</title>
+  <link rel="stylesheet" href="{% static 'css/pixella.css' %}" />
+</head>
+
+<body>
+  <div class="header">
     <h1>Image Compression with <span>Pixella</span></h1>
-    <div class="container">
-      <div class="upload_container">
-        <div class="wrapper">
-          <div class="image_container">
-            <img src="{% static 'images/peng.jpg' %}" alt="Uploaded Image" />
-          </div>
-          <div class="info_container">
-            <ul>
-              <li>Name: <span class="name">Default</span></li>
-              <li>Type: <span class="type">JPG</span></li>
-              <li>Size: <span class="size">431KB</span></li>
-              <li>Dimension: <span class="dimension">302 × 150 </span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="image_container">
-            <img src="{% static 'images/peng.jpg' %}" alt="Compressed Image" />
-          </div>
-          <div class="info_container">
-            <ul>
-              <li>Name: <span class="name">Default</span></li>
-              <li>Type: <span class="type">JPG</span></li>
-              <li>Size: <span class="size">431KB</span></li>
-              <li>Dimension: <span class="dimension">302 × 150</span></li>
-            </ul>
-          </div>
+  </div>
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input class="custom-file-upload" type="file" accept="image" name="image" id="file" />
+    <button class="compress_image" type="submit" id="submitBtn">Compress Image</button>
+    <div class="status">
+      <p id="message">{{ message }}</p>
+    </div>
+  </form>
+
+
+
+  <div class="container">
+    <div class="image_container">
+      <div class="wrapper">
+
+        <img src="{% if image.name %}{{ image_url }}{% else %}{% static 'images/default.png' %}{% endif %}"
+          alt="Image" />
+
+        <div class="info_container">
+          <ul>
+            <li>Name: <span class="name">{{ image.name }}</span></li>
+            <li>Type: <span class="type">{{ image.content_type }}</span></li>
+            <li>Size: <span class="size"> {{ image_size }} KB</span></li>
+            <li>Dimension: <span class="dimension"> {{ image_dim }} </span></li>
+          </ul>
         </div>
       </div>
 
-      <div class="buttons">
-        <button class="upload_image">
-          <input
-            type="file"
-            id="myFile"
-            accept="image/png,image/jpg"
-            name="filename"
-          />
-        </button>
-        <button class="compress_image">Compress Image</button>
+      <div class="wrapper">
+
+        <img
+          src="{% if compressed_image_url %}{{ compressed_image_url }}{% else %}{% static 'images/default.png' %}{% endif %}"
+          alt="Compressed Image" />
+
+        <div class="info_container">
+          <ul>
+            <li>Name: <span class="name">output_{{ image.name }}</span></li>
+            <li>Type: <span class="type">{{ image.content_type }}</span></li>
+            <li>Size: <span class="size"> {{ compressed_image_size }} KB</span></li>
+            <li>Dimension: <span class="dimension">{{ image_dim }}</span></li>
+            <li> <a href="{{ compressed_image_url }}" download>Download Output</a> </li>
+          </ul>
+        </div>
+
       </div>
+
     </div>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+    <div class="header">
+      <h4><span>Pixella </span>Made With Love</h4>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
 </html>

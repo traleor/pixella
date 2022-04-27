@@ -60,6 +60,7 @@ def main():
     except Exception as e:
         print("File not found", e)
         return
+    print("Image loaded successfully", image)
 
     # Compress the image
     # select compression method 1. Kcompression 2. Kmeans

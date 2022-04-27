@@ -93,7 +93,7 @@ ul {
   margin: 2rem;
 }
 .image_container {
-  width: 70%;
+  width: 100%;
   padding: 0 1rem;
 }
 .image_container img {
@@ -116,9 +116,3 @@ ul {
   padding: 1rem 0;
 }
 
-#compress_button {
-  width: fit-content;
-  padding: 0.8rem 0.5rem;
-  border-radius: 15px;
-  font-size: var(--small-font-size);
-}

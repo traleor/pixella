@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixella - Image Processing Tool</title>
-    <link rel="stylesheet" href="../assets/css/pixella.css" />
+    <link rel="stylesheet" href="{% static 'css/pixella.css' %}" />
   </head>
 
   <body>
@@ -14,7 +15,7 @@
       <div class="upload_container">
         <div class="wrapper">
           <div class="image_container">
-            <img src="../assets/images/peng.jpg" alt="Uploaded Image" />
+            <img src="{% static 'images/peng.jpg' %}" alt="Uploaded Image" />
           </div>
           <div class="info_container">
             <ul>
@@ -27,7 +28,7 @@
         </div>
         <div class="wrapper">
           <div class="image_container">
-            <img src="../assets/images/peng.jpg" alt="Compressed Image" />
+            <img src="{% static 'images/peng.jpg' %}" alt="Compressed Image" />
           </div>
           <div class="info_container">
             <ul>
@@ -41,15 +42,15 @@
       </div>
 
       <div class="buttons">
-        <button class="upload_image" id="upload_image">
+        <button class="upload_image">
           <input
             type="file"
             id="myFile"
-            accept="image/png, image/jpg"
+            accept="image/png,image/jpg"
             name="filename"
           />
         </button>
-        <button class="compress_image" id="compress_button">Compress Image</button>
+        <button class="compress_image">Compress Image</button>
       </div>
     </div>
 

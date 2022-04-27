@@ -37,7 +37,11 @@ pip install -r requirements.txt
 - Run main.py
 
 ```bash
+<!-- test main algorithm -->
 python main.py
+<!-- run django app -->
+python manage.py runserver
+<!-- visit http://localhost:8000/ on your browser -->
 ```
 
 ## Resources

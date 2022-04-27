@@ -55,12 +55,15 @@
             <li>Type: <span class="type">{{ image.content_type }}</span></li>
             <li>Size: <span class="size"> {{ compressed_image_size }} KB</span></li>
             <li>Dimension: <span class="dimension">{{ image_dim }}</span></li>
-            <li> <a href="{{ compressed_image_url }}" download>Download Output</a> </li>
           </ul>
         </div>
 
       </div>
 
+    </div>
+
+    <div class="container">
+      <button class="download"> <a href="{{ compressed_image_url }}" download>Download Output</a> </button>
     </div>
 
     <div class="header">

@@ -17,12 +17,7 @@ class CustomFileSystemStorage(FileSystemStorage):
 
 def index(request):
     message = ""
-    compression_type = ""
     fss = CustomFileSystemStorage()
-
-    # if request.method == "POST" and request.FILES["image"]:
-        
-
     try:
         image = request.FILES["image"]
         print("Name", image.file)
@@ -51,9 +46,11 @@ def index(request):
         k = 8
         try:
             compressed_image = KMeanCompression(imageObj, k)
+            message = "Image successfully compressed: Lossless"
         except Exception as e:
             print("Exception", e)
-            compressed_image = ResizeCompression(imageObj, 4)
+            compressed_image = ResizeCompression(imageObj, 2)
+            message = "Image successfully compressed: Lossy"
 
         io.imsave(
             str(settings.MEDIA_ROOT) + "/" + "output_" + image.name, compressed_image
@@ -65,7 +62,6 @@ def index(request):
             2,
         )
         print("COMPRESSED", image_url)
-        message = "Image successfully compress"
         return TemplateResponse(
             request,
             "index.html",

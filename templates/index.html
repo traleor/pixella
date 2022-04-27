@@ -9,40 +9,38 @@
   </head>
 
   <body>
-    <h1>Hello World, I'm Pixella</h1>
+    <h1>Image Compression with <span>Pixella</span></h1>
     <div class="container">
-      <div class="heroText">
-        Compress With &blank;<span id="pixella">PIXELLA</span>Today...
-      </div>
-      <div class="wrapper">
-        <div class="image_container" id="display_image">
-          <img src="../assets/images/Default.jpg" id="default_image" alt="" />
+      <div class="upload_container">
+        <div class="wrapper">
+          <div class="image_container">
+            <img src="../assets/images/peng.jpg" alt="Uploaded Image" />
+          </div>
+          <div class="info_container">
+            <ul>
+              <li>Name: <span class="name">Default</span></li>
+              <li>Type: <span class="type">JPG</span></li>
+              <li>Size: <span class="size">431KB</span></li>
+              <li>Dimension: <span class="dimension">302 × 150 </span></li>
+            </ul>
+          </div>
         </div>
-        <div class="info_container">
-          <ul style="list-style: none">
-            <li>Name: <span class="name">Default</span></li>
-            <li>Type: <span class="type">JPG</span></li>
-            <li>Size: <span class="size">431KB</span></li>
-            <li>Dimension: <span class="dimension">302 × 150</span></li>
-            <li>ColorType: <span class="color_Type">TrueColor</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="wrapper" id="wrapper_1">
-        <div class="image_container">
-          <img src="/assets/Default.jpg" id="default_image" alt="" />
-        </div>
-        <div class="info_container">
-          <ul style="list-style: none">
-            <li>Name: <span class="name">Default</span></li>
-            <li>Type: <span class="type">JPG</span></li>
-            <li>Size: <span class="size">431KB</span></li>
-            <li>Dimension: <span class="dimension">302 × 150</span></li>
-            <li>ColorType: <span class="color_Type">TrueColor</span></li>
-          </ul>
+        <div class="wrapper">
+          <div class="image_container">
+            <img src="../assets/images/peng.jpg" alt="Compressed Image" />
+          </div>
+          <div class="info_container">
+            <ul>
+              <li>Name: <span class="name">Default</span></li>
+              <li>Type: <span class="type">JPG</span></li>
+              <li>Size: <span class="size">431KB</span></li>
+              <li>Dimension: <span class="dimension">302 × 150</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="button">
+
+      <div class="buttons">
         <button class="upload_image" id="upload_image">
           <input
             type="file"
@@ -51,9 +49,7 @@
             name="filename"
           />
         </button>
-      </div>
-      <div class="button">
-        <button class="upload_image" id="compress_button">Compress</button>
+        <button class="compress_image" id="compress_button">Compress Image</button>
       </div>
     </div>
 

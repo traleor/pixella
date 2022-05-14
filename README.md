@@ -4,8 +4,8 @@ This is an Image Processing tool written in Python. Th initial functionality for
 
 ## Functionalites
 
-- [ ] Image Compression
-- [ ] Image Resize
+- [x] Image Compression
+- [x] Image Resize
 
 ## Setup Instructions
 
